@@ -57,7 +57,7 @@ class DataHandler():
                 print(time)
                 print(index)
                 while time < index:
-                    temp_df = pd.concat([temp_df, pd.DataFrame(None, index=[time], columns=self.df.columns)])
+                    temp_df = pd.concat([temp_df, pd.DataFrame(numpy.nan, index=[time], columns=self.df.columns)])
                     time = time + self.dt
 
                 temp_df = pd.concat([temp_df, pd.DataFrame([list(row)], index=[index], columns=self.df.columns)])
